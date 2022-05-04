@@ -29,6 +29,7 @@ def print_reading_list_item(item):
     row.append(item['URIDictionary']['title'])
     row.append(str(item['ReadingList']['DateAdded']))
     row.append(item['URLString'])
+    # Domain
     row.append(urlparse(item['URLString']).netloc)
     print(delimeter.join(row))
 
